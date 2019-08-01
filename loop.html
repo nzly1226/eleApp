@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-icon mui-icon-left-nav mui-pull-left" href="dev.html"></a>
+		<h1 class="mui-title">回路详情</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-row">
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<div class="loop">
+					<img src="img/loop_online.png" width="100" height="100"/>
+					<p>
+						回路名称：<span>模拟回路1</span><br/>
+						所属设备：<span>模拟配电箱1</span><br/>
+						开关状态：<span class="switch_on">开</span><br/>
+						工作状态：<span class="on">在线</span><br/>
+						漏电流值：<span class="on">0 mA</span><br/>
+					</p>
+					<div class="mui-switch mui-switch-mini mui-active switch">
+					  <div class="mui-switch-handle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mui-row">  
+			<div class="mui-col-xs-6 mui-col-sm-6">
+				<a href="stage.html" class="devs">
+					<p class="title">模拟水位1</p>
+					<div>
+						<img src="img/stage_on.png" width="80" height="80"/>
+						<p class="online">在线</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-6 mui-col-sm-6">
+			   	<a class="devs">
+			   		<p class="title">模拟水位2</p>
+			   		<div>
+			   			<img src="img/stage_out.png" width="80" height="80"/>
+			   			<p class="outline">离线</p>
+			   		</div>
+			   	</a> 
+			</div>
+			<div class="mui-col-xs-6 mui-col-sm-6">
+			   	<a class="devs">
+			   		<p class="title">模拟水位3</p>
+			   		<div>
+			   			<img src="img/stage_d.png" width="80" height="80"/>
+			   			<p class="fault">故障</p>
+			   		</div>
+			   	</a> 
+			</div>
+			<div class="mui-col-xs-6 mui-col-sm-6">
+			   	<a class="devs">
+			   		<p class="title">模拟水位4</p>
+			   		<div>
+			   			<img src="img/stageD.png" width="80" height="80"/>
+			   			<p class="danger">报警</p>
+			   		</div>
+			   	</a> 
+			</div>
+		</div>
+	</div>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	mui.init();
+	mui.plusReady(function () {
+	    var back = document.getElementById("tomap");
+		back.addEventListener("tap",function(){
+			mui.openWindow({
+				url:"frist.html",
+				waiting:{
+					autoShow:false
+				}
+			});
+			//mui.trigger(back,'tap');
+		});
+	})
+	</script>
+</body>
+</html>

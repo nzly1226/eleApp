@@ -1,0 +1,370 @@
+.bj{
+	background-image: url(../img/Bj.jpg);
+	background-position: center;
+	width: 100%;
+	height: 100%;
+}
+.font_r{
+	text-align: right;
+}
+.login{
+	margin: 60px;
+	margin-top: 175px;
+	border-radius: 1.25rem;
+	background-color: #fff;
+}
+.mui-content{
+	background-color: rgba(255,255,255,0);
+}
+#map{
+	position: fixed;
+}
+.devs{
+	margin: 10px;
+	height: 140px;
+	background-color: #fff;
+	border-radius: 10px;
+	display: block;
+}
+.group_list{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	height: 100px;
+	background-color: #fff;
+	border-radius: 10px;
+	display: block;
+}
+.group_list div{
+	overflow: hidden;
+}
+.group_list div img{
+	float: left;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+.group_list div p{
+	float: left;
+	margin-left: 20px;
+	line-height: 30px;
+	margin-top: 15px;
+}
+.group_list div p span{
+	color:#000000;
+}
+.group_list div .switch_g{
+	float: right;
+	margin-right: 20px;
+	margin-top: 35px;
+}
+.danger_list{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	height: 120px;
+	background-color: #fff;
+	border-radius: 10px;
+	display: block;
+}
+.danger_list div{
+	overflow: hidden;
+}
+.danger_list div img {
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+.danger_list div p{
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: 10px;
+}
+.danger_list div p span{
+	color: #000000;
+}
+.danger_list div .font_D{
+	color: #CF2D28;
+}
+.danger_list div .font_on{
+	color:#2AC845;
+}
+.device{
+	margin: 10px;
+	height: 280px;
+	background-color: #fff;
+	border-radius: 10px;
+	display: block;
+}
+.device .div{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.device .div img{
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.device .div p{
+	float: left;
+	margin-left: 10px;
+	line-height: 30px;
+	margin-top: 15px;
+}
+.device div p span{
+	color: #333;
+}
+.device .line_border{
+	border-right:thick double #dfdfdf;
+}
+.device div .p{
+	line-height: 24px;
+	text-align: center;
+}
+.device div p .dev_on{
+	color: #2AC845;
+}
+.device div p .dev_outline{
+	color: #999999;
+}
+.device div p .dev_danger{
+	color: #CF2D28;
+}
+.device div p .dev_fault{
+	color: #ff9c00;
+}
+.device .line{
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 1px;
+	background-color: #dfdfdf;
+	display: block;
+}
+.device .p{
+	margin-top: 10px;
+}
+.device .p .dev_on{
+	color:#2AC845;
+}
+.device .p .dev_outline{
+	color:#999999;
+}
+.device .p .dev_danger{
+	color:#CF2D28;
+}
+.device .p .dev_fault{
+	color:#ff9c00;
+}
+.loop{
+	margin: 10px;
+	height: 160px;
+	background-color: #fff;
+	border-radius: 10px;
+	display: block;
+	overflow: hidden;
+}
+.loop img{
+	float: left;
+	display: block;
+	margin-left: 10px;
+	margin-top: 30px;
+}
+
+.loop p{
+	color: #999;
+	float: left;
+	margin-left: 10px;
+	margin-top: 26px;
+	font-size: 12px;
+}
+.loop p span{
+	color: #111;
+	
+}
+.loop p .on{
+	color: #2AC845;
+}
+.loop p .danger{
+	color: #CF2D28;
+}
+.loop p .fault{
+	color: #ff9c00;
+}
+.loop p .switch_on{
+	color: #2AC845;
+}
+.loop p .switch_off{
+	color: #2AC845;
+}
+.loop p .switch_fault{
+	color: #ff9c00;
+}
+.loop .switch{
+	float: right;
+	margin-right: 10px;
+	margin-top: 65px;
+}
+
+.devs .title{
+	font-size: 14px;
+	margin-left: 20px;
+	color: #666;
+	line-height: 40px;
+}
+.devs div{
+	overflow: hidden;
+}
+.devs div img{
+	margin-left: 10px;
+	float: left;
+}
+.devs div p{
+	float: right;
+	margin-right: 20px;
+	font-size: 14px;
+	margin-top: 58px;
+}
+.devs div .online{
+	color:#2AC845;
+}
+.devs div .outline{
+	color:#999999;
+}
+.devs div .danger{
+	color: #CF2D28;
+}
+.devs div .fault{
+	color:#ff9c00;
+}
+.devImg{
+	margin-top: 10px;
+	margin-left: 50px;
+	float: left;
+	width: 80px;
+	height: 80px;
+}
+.stage{
+	margin-top:80px;
+}
+
+.stage img{
+	margin: auto;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.stageN span{
+	display: block;
+	margin: auto;
+}
+
+.stageN span p{
+	margin-left:24%;
+	color:#000;
+	margin-bottom: 0rem;
+}
+
+.mui-input-row{
+	border-bottom: 1px solid #dfdfdf;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.mui-input-row label{
+	font-size: 12px;
+	margin-top: 2px;
+	width:40%;
+}
+
+.mui-input-row label ~ input, .mui-input-row label ~ select, .mui-input-row label ~ textarea{
+	width: 60%;
+}
+
+.mui-input-row input{
+	font-size: 14px;
+}
+
+.mui-bar-tab .mui-tab-item{
+	height: 44px;
+}
+
+/* .ui-alert{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+   background: rgba(0,0,0,.6);
+} */
+
+.mui-table-view{
+	background-color: rgba(0,0,0,0);
+}
+
+.mui-table-view:before{
+	height: 0px;
+}
+
+.mui-table-view:after{
+	height: 0px;
+}
+
+.mui-content{
+	margin-bottom: 50px;
+}
+
+.mui-content ul li a{
+	background-color: #fff;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 100%;
+	height: 200px;
+}
+
+html, body {/* width:100%; height:100%; */ padding:0; margin:0;}
+
+.stage_bj{
+	background-color: ;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+.stage{
+	text-align: center;
+	
+}
+
+.stage h4{
+	font-size: 20px;
+	font-weight: normal;
+	color: #666;
+	line-height: 100px;
+}
+
+.stage .stage_value{
+	margin-top: 50px;
+	font-size: 100px;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+
+.stage .stage_value span{
+	font-size: 20px;
+}
+
+.stage_on{
+	color:#0062CC;
+}
+
+.stage_out{
+	color:#797979;
+}
+
+.stage_fault{
+	color:#ff9c00;
+}
+
+.stage_danger{
+	color:#CF2D28;
+}

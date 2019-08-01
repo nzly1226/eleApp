@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a href="list.html" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">设备详情</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-row">
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<div class="device">
+					<div class="div">
+						<img src="img/ele_on.png" width="100" height="100"/>
+						<p>
+							设备名称：<span>模拟设备1</span><br/>
+							设备编号：<span>1234567890</span><br/>
+							设备状态：<span class="dev_on">在线</span>
+						</p>
+					</div>
+					<span class="line"></span>
+					<div class="mui-row">
+						<!-- <p class="p">
+							A相：电压：<span>0.0</span> V，电流：<span>0.0</span> A，功率：<span>0.0</span> W；<br/>
+							B相：电压：<span>0.0</span> V，电流：<span>0.0</span> A，功率：<span>0.0</span> W；<br/>
+							C相：电压：<span>0.0</span> V，电流：<span>0.0</span> A，功率：<span>0.0</span> W；<br/>
+							门禁状态：<span class="dev_on">在线</span> ；风扇状态：<span class="dev_on">在线</span> ；
+						</p> -->
+						<div class="mui-col-sm-4 mui-col-xs-4 line_border">
+							<p style="text-align:center;line-height:24px">
+								A相<br/>
+								电压：<span>0.0</span> V<br/>
+								电流：<span>0.0</span> A<br/>
+								功率：<span>0.0</span> W<br/>
+							</p>
+						</div>
+						<div class="mui-col-sm-4 mui-col-xs-4 line_border">
+							<p style="text-align:center;line-height:24px">
+								B相<br/>
+								电压：<span>0.0</span> V<br/>
+								电流：<span>0.0</span> A<br/>
+								功率：<span>0.0</span> W<br/>
+							</p>
+						</div>
+						<div class="mui-col-sm-4 mui-col-xs-4">
+							<p style="text-align:center;line-height:24px">
+								C相<br/>
+								电压：<span>0.0</span> V<br/>
+								电流：<span>0.0</span> A<br/>
+								功率：<span>0.0</span> W<br/>
+							</p>
+						</div>
+					</div>
+					<span class="line"></span>
+					<p class="p" style="text-align: center;">门禁状态：<span class="dev_on">在线</span> ；风扇状态：<span class="dev_on">在线</span> ；</p>
+				</div>
+			</div>
+		</div>
+		<div class="mui-row">  
+			<div class="mui-col-xs-6 mui-col-sm-6">
+				<a href="loop.html" class="devs">
+					<p class="title">模拟回路1</p>
+					<div>
+						<img src="img/loop_online.png" width="80" height="80"/>
+						<p class="online">在线</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-6 mui-col-sm-6">
+			   	<a class="devs">
+			   		<p class="title">模拟回路2</p>
+			   		<div>
+			   			<img src="img/loop_outline.png" width="80" height="80"/>
+			   			<p class="outline">离线</p>
+			   		</div>
+			   	</a> 
+			</div>
+			<div class="mui-col-xs-6 mui-col-sm-6">
+			   	<a class="devs">
+			   		<p class="title">模拟回路3</p>
+			   		<div>
+			   			<img src="img/loop_danger.png" width="80" height="80"/>
+			   			<p class="danger">故障</p>
+			   		</div>
+			   	</a> 
+			</div>
+		</div>
+	</div>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	mui.init();
+	mui.plusReady(function () {
+	    var back = document.getElementById("tomap");
+		back.addEventListener("tap",function(){
+			mui.openWindow({
+				url:"list.html",
+				waiting:{
+					autoShow:false
+				}
+			});
+			//mui.trigger(back,'tap');
+		});
+	})
+	</script>
+</body>
+</html>

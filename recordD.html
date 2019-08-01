@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" style="position: fixed;">
+		<button id="backs" class="mui-pull-left mui-btn-link"><span class="mui-icon mui-icon-left-nav"></span></button>
+		<h1 class="mui-title">故障记录</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-row">  
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/ele_on.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>配电箱离线</span><br/>
+							所属设备：<span>模拟配电箱3</span><br/>
+							所属回路：<span>无</span><br/>
+							发生时间：<span>19-03-01 12:00:28</span><br/>
+							故障状态：<span class="font_on">已处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/loop_online.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>回路离线</span><br/>
+							所属设备：<span>模拟配电箱1</span><br/>
+							所属回路：<span>模拟回路3</span><br/>
+							发生时间：<span>19-03-03 12:00:28</span><br/>
+							故障状态：<span class="font_on">已处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/stage_on.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>远程水位离线</span><br/>
+							所属设备：<span>模拟配电箱1</span><br/>
+							所属回路：<span>模拟回路1</span><br/>
+							发生时间：<span>19-03-03 12:00:28</span><br/>
+							故障状态：<span class="font_on">已处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/stage_on.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>远程水位警报</span><br/>
+							所属设备：<span>模拟配电箱1</span><br/>
+							所属回路：<span>模拟回路1</span><br/>
+							发生时间：<span>19-03-03 12:00:28</span><br/>
+							故障状态：<span class="font_on">未处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+		</div>
+	</div>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	mui.init();
+	mui.ready(function () {
+		var back = document.getElementById("backs");
+		back.addEventListener("tap",function(){
+			mui.openWindow({
+				url:"realtimeD.html",
+				waiting:{
+					autoShow:false
+				}
+			});
+			//mui.trigger(back,'tap')
+		});
+	});
+	</script>
+</body>
+</html>

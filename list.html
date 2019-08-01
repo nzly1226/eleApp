@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a href="frist.html" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">设备列表</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-row">  
+			<div class="mui-col-xs-6 mui-col-sm-6">
+				<a href="dev.html" class="devs">
+					<p class="title">模拟配电箱1</p>
+					<div>
+						<img src="img/ele_on.png" width="80" height="80"/>
+						<p class="online">在线</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-6 mui-col-sm-6">
+			   	<a class="devs">
+			   		<p class="title">模拟配电箱2</p>
+			   		<div>
+			   			<img src="img/ele_outline.png" width="80" height="80"/>
+			   			<p class="outline">离线</p>
+			   		</div>
+			   	</a> 
+			</div>
+			<div class="mui-col-xs-6 mui-col-sm-6">
+			   	<a class="devs">
+			   		<p class="title">模拟配电箱3</p>
+			   		<div>
+			   			<img src="img/ele_out.png" width="80" height="80"/>
+			   			<p class="danger">故障</p>
+			   		</div>
+			   	</a> 
+			</div>
+		</div>
+	</div>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	mui.init();
+	mui.plusReady(function () {
+		var back = document.getElementById("tomap");
+		back.addEventListener("tap",function(){
+			mui.openWindow({
+				url:"frist.html",
+				waiting:{
+					autoShow:false
+				}
+			});
+			//mui.trigger(back,'tap');
+		});
+	});
+// 	mui("#uls").on("tap","li",function(){
+// 		var a = "1";
+// 		var b = "2";
+// 		//alert(a+b);
+// 		mui.toast(this.innerText);
+// 	})
+	</script>
+</body>
+</html>

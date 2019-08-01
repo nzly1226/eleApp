@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mui.picker.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mui.poppicker.css"/>
+</head>
+<body class="bj">
+	<div class="mui-content">
+		<form class="login">
+			<div style="height: 60px;">
+				<h3 style="font-size: 20px;margin: auto;width: 100%;text-align: center;line-height: 60px;font-family: arial;font-weight: normal;">智能配电箱管理系统</h3>
+			</div>
+			<div class="mui-input-row">
+				<label>企业：</label>
+				<input type="text" id="company" placeholder="请选择"></input>
+			</div>
+			<div class="mui-input-row">
+				<label style="font_r">账号：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入用户名">
+			</div>
+			<div class="mui-input-row">
+				<label style="font_r">密码：</label>
+				<input type="password" class="mui-input-password" placeholder="请输入密码">
+			</div>
+			<div class="mui-button-row" style="height: 60px;margin-top: 10px;">
+				<button id="toItem" type="button" class="mui-btn mui-btn-primary" style="width: 200px;" >登录</button>
+			</div>
+		</form>
+	</div>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.picker.js" type="text/javascript"></script>
+	<script src="js/mui.picker.min.js" type="text/javascript"></script>
+	<script src="js/mui.poppicker.js"></script>
+	<script type="text/javascript">
+	mui.init({
+		gestureConfig:{
+			swipedown:true
+		}
+	});
+	mui.ready(function () {
+		var picker = new mui.PopPicker({
+			layer:1,
+			buttons:["取消","确认"]
+		});
+		picker.setData([{value:"0",text:"市政公用新能源"},{value:"1",text:"照明公司"}]);
+		
+	    var into = document.getElementById("toItem");
+		var company = document.getElementById("company");
+		//var companyR = document.getElementById("companyResult");
+		into.addEventListener("tap",function(){
+			mui.toast('登录成功！');
+			mui.openWindow({
+				url:"item.html",
+				waiting: {
+					autoShow: false
+				}
+			});
+			//mui.trigger(into,'tap');
+		});
+		company.addEventListener("tap",function(event){
+			picker.show(function(items){
+				console.log(items[0]);
+				//companyR.innerText = JSON.stringify(items[0]);
+				document.getElementById("company").value = items[0].text.toString();
+			});
+		},false);
+	})
+	</script>
+</body>
+</html>

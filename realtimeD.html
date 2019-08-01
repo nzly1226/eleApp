@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" style="position: fixed;">
+		<h1 class="mui-title">实时报警</h1>
+		<button id="record" class="mui-pull-right mui-btn-link"><span class="mui-icon mui-icon-bars"></span></button>
+	</header>
+	<div class="mui-content">
+		<div class="mui-row">  
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/ele_out.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>配电箱离线</span><br/>
+							所属设备：<span>模拟配电箱3</span><br/>
+							所属回路：<span>无</span><br/>
+							发生时间：<span>19-03-01 12:00:28</span><br/>
+							故障状态：<span class="font_D">未处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/loop_outline.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>回路离线</span><br/>
+							所属设备：<span>模拟配电箱1</span><br/>
+							所属回路：<span>模拟回路3</span><br/>
+							发生时间：<span>19-03-03 12:00:28</span><br/>
+							故障状态：<span class="font_D">未处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/stage_d.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>远程水位离线</span><br/>
+							所属设备：<span>模拟配电箱1</span><br/>
+							所属回路：<span>模拟回路1</span><br/>
+							发生时间：<span>19-03-03 12:00:28</span><br/>
+							故障状态：<span class="font_D">未处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+			<div class="mui-col-xs-12 mui-col-sm-12">
+				<a class="danger_list">
+					<div>
+						<img src="img/stageD.png" width="80" height="80"/>
+						<p>
+							故障信息：<span>远程水位警报</span><br/>
+							所属设备：<span>模拟配电箱1</span><br/>
+							所属回路：<span>模拟回路1</span><br/>
+							发生时间：<span>19-03-03 12:00:28</span><br/>
+							故障状态：<span class="font_D">未处理</span>
+						</p>
+					</div>
+				</a> 
+			</div>
+		</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab" style="position: fixed;height: 40px;">
+		<a class="mui-tab-item" id='maps'>
+			<span class="mui-icon mui-icon-location"></span>
+			<span class="mui-tab-label">地图</span>
+		</a>
+		<a class="mui-tab-item" id="groups">
+			<span class="mui-icon mui-icon-list"></span>
+			<span class="mui-tab-label">组控制</span>
+		</a>
+		<a class="mui-tab-item mui-active" id="dangers">
+			<span class="mui-icon mui-icon-info-filled"></span>
+			<span class="mui-tab-label">报警</span>
+		</a>
+	</nav>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	mui.init();
+	mui.ready(function () {
+		var map = document.getElementById("maps");
+		var record = document.getElementById("record");
+		var group = document.getElementById("groups");
+		//var back = document.getElementById("backs");
+		group.addEventListener("tap",function(){
+		// 			mui.toast('退出成功！');
+			mui.openWindow({
+				url:"group.html",
+				waiting: {
+					autoShow: false
+				}
+			});
+			//mui.trigger(group,'tap');
+		});
+// 		back.addEventListener("tap",function(){
+// 			mui.toast('退出成功！');
+// 			mui.openWindow({
+// 				url:"index.html",
+// 				waiting: {
+// 					autoShow: false
+// 				}
+// 			});
+// 			mui.trigger(back,'tap');
+// 		});
+		map.addEventListener("tap",function(){
+			mui.openWindow({
+				url:"frist.html",
+				waiting:{
+					autoShow:false
+				}
+			});
+			//mui.trigger(map,'tap');
+		});
+		record.addEventListener("tap",function(){
+			mui.openWindow({
+				url:"recordD.html",
+				waiting:{
+					autoShow:false,
+				}
+			});
+			//mui.trigger(record,'tap');
+		});
+	})
+	</script>
+</body>
+</html>
